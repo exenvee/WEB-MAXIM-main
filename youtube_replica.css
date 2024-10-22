@@ -1,0 +1,198 @@
+/* Загальні стилі для темної теми */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #181818; /* Темний фон */
+    color: #e0e0e0; /* Світлий текст */
+  }
+  
+  /* Верхнє меню */
+  header {
+    background-color: #202020; /* Темно-сірий фон */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo h1 {
+    font-size: 24px;
+    color: #ff0000; /* Червоний колір YouTube логотипа */
+  }
+  
+  header .search-bar {
+    width: 40%;
+    padding: 8px;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    background-color: #303030;
+    color: #e0e0e0;
+  }
+  
+  header .user-profile img {
+    width: 35px;
+    border-radius: 50%;
+  }
+  
+  /* Контейнер для меню і контенту */
+  .container {
+    display: flex;
+  }
+  
+  /* Бокове меню */
+  .sidebar {
+    width: 250px;
+    background-color: #202020;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    height: 100vh;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    font-size: 18px;
+    color: #e0e0e0; /* Білий текст */
+    cursor: pointer;
+    border-radius: 5px; /* Згладження країв */
+    transition: background-color 0.3s, color 0.3s; /* Плавний перехід */
+  }
+  
+  .sidebar ul li:hover {
+    color: #ff0000; /* Червоний текст при наведенні */
+    background-color: rgba(
+      255,
+      0,
+      0,
+      0.1
+    ); /* Світло-червоний фон при наведенні */
+  }
+  
+  .sidebar h3 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #909090;
+  }
+  
+  /* Основний контент */
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #181818; /* Темний фон */
+  }
+  
+  /* Вкладки */
+  .tabs {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+  }
+  
+  .tabs a {
+    color: #e0e0e0; /* Білий текст */
+    text-decoration: none; /* Без підкреслень */
+    padding: 10px 15px;
+    background-color: transparent; /* Прозорий фон за замовчуванням */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Плавний перехід */
+  }
+  
+  .tabs a:hover {
+    background-color: #383838; /* Темний фон при наведенні */
+    color: #ff0000; /* Червоний текст при наведенні */
+  }
+  
+  .tabs a.active {
+    background-color: #ff0000; /* Червона кнопка для активної вкладки */
+    color: white; /* Білий текст для активної вкладки */
+  }
+  
+  /* Сітка для відео */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 відео у ряд */
+    grid-gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .video {
+    background-color: #202020;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s; /* Анімація для ефекту наведення */
+  }
+  
+  .video:hover {
+    transform: scale(1.05); /* Збільшення при наведенні */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Більша тінь при наведенні */
+  }
+  
+  .video h3 {
+    font-size: 16px;
+    color: #e0e0e0; /* Білий текст для назв відео */
+    margin: 10px 0;
+    transition: color 0.3s; /* Плавний перехід кольору */
+  }
+  
+  .video:hover h3 {
+    color: #ff0000; /* Червоний текст при наведенні на відео */
+  }
+  
+  .thumbnail-placeholder {
+    background-color: #383838;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #909090;
+  }
+  
+  .thumbnail {
+    width: 100%; /* Займає всю ширину контейнера відео */
+    height: auto;
+    border-radius: 8px; /* Закруглені краї */
+  }
+  
+  /* Спеціальний акцент на вкладках */
+  .tabs a.active {
+    background-color: #ff0000; /* Червона кнопка для активної вкладки */
+    color: white; /* Білий текст для активної вкладки */
+  }
+  
+  /* Стилі для випадаючого меню */
+  .user-profile {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none; /* Приховуємо меню за замовчуванням */
+    position: absolute;
+    top: 45px; /* Розташування меню під іконкою */
+    right: 0;
+    background-color: #202020;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: 150px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #e0e0e0;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }

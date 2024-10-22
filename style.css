@@ -1,0 +1,229 @@
+/* Загальні стилі */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #f5f5f5, #eaeaea, #ffffff, #eaeaea, #f5f5f5);
+    background-size: 400% 100%;
+    animation: gradientAnimation 12s ease infinite;
+    color: #444;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.01s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Головний контент */
+main {
+    flex: 1;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Навігація */
+header {
+    background-color: #a0d2eb;
+    color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #4a90e2;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: #0066cc;
+    border-bottom: 2px solid #0066cc;
+}
+
+/* Стилі для секцій */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для списків практичних і лабораторних робіт */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul li a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #004b8d;
+}
+
+/* Стилі для заголовків та параграфів */
+h2, h3 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Стилі для зображень */
+#about img {
+    width: 150px;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 20px auto;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #a0d2eb;
+    color: #333;
+}
+
+footer a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопки */
+button {
+    background-color: #a0d2eb;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #82b8d6;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #66a2c3;
+}
+
+/* Адаптивність */
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    #about img {
+        width: 120px;
+    }
+}

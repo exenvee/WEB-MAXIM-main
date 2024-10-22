@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №1</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="icon" href="img\ico\work.png" type="png">
+</head>
+
+<body>
+    <div class="page-container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про себе</a></li>
+                    <li><a href="https://github.com/exenvee/WEB-MAXIM" target="_blank"
+                            rel="noopener noreferrer">Практичні роботи</a></li>
+                    <li><a href="https://github.com/exenvee/WEB-MAXIM" target="_blank"
+                            rel="noopener noreferrer">Лабораторні роботи</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="reg_form">
+                <h1>Registration form</h1>
+                <form action="https://webhook.site" method="post">
+                    <label for="Name">Name:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="text" name="Name" id="Name" required>
+                    <br>
+                    <label for="SurName">SurName:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="text" name="SurName" id="Surname" required>
+                    <br>
+                    <label for="email">Email:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="email" name="email" id="email" required>
+                    <br>
+                    <label for="password">Pass:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="password" name="password" id="password" required>
+                    <br>
+                    <label for="C_pass">Confirm password:<sup style="color: lime;">*</sup></label>
+                    <br>
+                    <input type="password" name="C_pass" id="C_pass" required>
+                    <br><br>
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <button>Send</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>Контакт: zakaradzemaks@gmail.com</p>
+            <p><a href="https://github.com/exenvee" target="_blank" rel="noopener noreferrer">Мій GitHub</a></p>
+        </footer>
+    </div>
+    <!-- Підключення JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Перезавантаження сторінки при поверненні через кнопку "Назад" у браузері
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        };
+    </script>
+</body>
+
+</html>
