@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Calendar & Clock</title>
+  <link rel="stylesheet" href="figma.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Header Section -->
+    <header>
+      <h1>Interactive Calendar & Clock</h1>
+    </header>
+
+    <div class="content-wrapper">
+      <!-- Calendar Section -->
+      <section class="calendar-section">
+        <h2>Calendar</h2>
+        <div class="calendar-container">
+          <div id="calendar">
+            <div class="calendar-header">
+              <button class="prev-month-btn" onclick="changeMonth(-1)">&#10094;</button>
+              <span id="month-year"></span>
+              <button class="next-month-btn" onclick="changeMonth(1)">&#10095;</button>
+            </div>
+            <div class="calendar-year-selector">
+              <button class="prev-year-btn" onclick="changeYear(-1)">&#10094;</button>
+              <select id="year-select" onchange="changeYearFromSelect()"></select>
+              <button class="next-year-btn" onclick="changeYear(1)">&#10095;</button>
+            </div>
+            <div class="calendar-days">
+              <div class="calendar-day-name">Sun</div>
+              <div class="calendar-day-name">Mon</div>
+              <div class="calendar-day-name">Tue</div>
+              <div class="calendar-day-name">Wed</div>
+              <div class="calendar-day-name">Thu</div>
+              <div class="calendar-day-name">Fri</div>
+              <div class="calendar-day-name">Sat</div>
+            </div>
+            <div class="calendar-days-grid" id="calendar-days-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clock Section -->
+      <section class="clock-section">
+        <h2>Clock</h2>
+        <div class="clock-container">
+          <div id="clock">
+            <div class="clock-face">
+              <div id="hour" class="clock-hand"></div>
+              <div id="minute" class="clock-hand"></div>
+              <div id="second" class="clock-hand"></div>
+            </div>
+            <div id="time-text"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="figma.js"></script>
+</body>
+</html>
