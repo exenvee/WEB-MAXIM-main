@@ -1,65 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Calendar & Clock</title>
-  <link rel="stylesheet" href="figma.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John - Creative Technologist</title>
+    <link rel="stylesheet" href="figma.css">
 </head>
 <body>
-  <div class="main-container">
-    <!-- Header Section -->
-    <header>
-      <h1>Interactive Calendar & Clock</h1>
-    </header>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="#works">Works</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-    <div class="content-wrapper">
-      <!-- Calendar Section -->
-      <section class="calendar-section">
-        <h2>Calendar</h2>
-        <div class="calendar-container">
-          <div id="calendar">
-            <div class="calendar-header">
-              <button class="prev-month-btn" onclick="changeMonth(-1)">&#10094;</button>
-              <span id="month-year"></span>
-              <button class="next-month-btn" onclick="changeMonth(1)">&#10095;</button>
-            </div>
-            <div class="calendar-year-selector">
-              <button class="prev-year-btn" onclick="changeYear(-1)">&#10094;</button>
-              <select id="year-select" onchange="changeYearFromSelect()"></select>
-              <button class="next-year-btn" onclick="changeYear(1)">&#10095;</button>
-            </div>
-            <div class="calendar-days">
-              <div class="calendar-day-name">Sun</div>
-              <div class="calendar-day-name">Mon</div>
-              <div class="calendar-day-name">Tue</div>
-              <div class="calendar-day-name">Wed</div>
-              <div class="calendar-day-name">Thu</div>
-              <div class="calendar-day-name">Fri</div>
-              <div class="calendar-day-name">Sat</div>
-            </div>
-            <div class="calendar-days-grid" id="calendar-days-grid"></div>
-          </div>
-        </div>
-      </section>
+        <main>
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Hi, I am Maxim,<br>Businessman</h1>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    <a href="#" class="btn">Download Resume</a>
+                </div>
+                <img src="img/Group 1.jpg" alt="John's photo" class="hero-image">
+            </section>
 
-      <!-- Clock Section -->
-      <section class="clock-section">
-        <h2>Clock</h2>
-        <div class="clock-container">
-          <div id="clock">
-            <div class="clock-face">
-              <div id="hour" class="clock-hand"></div>
-              <div id="minute" class="clock-hand"></div>
-              <div id="second" class="clock-hand"></div>
+            <section class="recent-posts">
+                <div class="recent-posts-header">
+                    <h2>Recent posts</h2>
+                    <a href="#" style="color: #00A8CC;">View all</a>
+                </div>
+                <div class="posts">
+                    <div class="post">
+                        <h3>Making a design system from scratch</h3>
+                        <p>12 Feb 2020 | Design, Pattern</p>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                    <div class="post">
+                        <h3>Creating pixel perfect icons in Figma</h3>
+                        <p>12 Feb 2020 | Figma, Icon Design</p>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="featured-works">
+                <h2>Featured works</h2>
+                <div class="work">
+                    <img src="img/Rectangle 30.jpg" alt="Dashboard" class="work-image">
+                    <div class="work-info">
+                        <h3>Designing Dashboards</h3>
+                        <span class="tag">2020</span>
+                        <span>Dashboard</span>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/Rectangle 32.jpg" alt="Vibrant Portraits" class="work-image">
+                    <div class="work-info">
+                        <h3>Vibrant Portraits of 2020</h3>
+                        <span class="tag">2018</span>
+                        <span>Illustration</span>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/Rectangle 34.jpg" alt="36 Days of Malayalam type" class="work-image">
+                    <div class="work-info">
+                        <h3>36 Days of Malayalam type</h3>
+                        <span class="tag">2018</span>
+                        <span>Typography</span>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social-icons">
+                <a href="#"><img src="https://via.placeholder.com/30" alt="Facebook"></a>
+                <a href="#"><img src="https://via.placeholder.com/30" alt="Instagram"></a>
+                <a href="#"><img src="https://via.placeholder.com/30" alt="Twitter"></a>
+                <a href="#"><img src="https://via.placeholder.com/30" alt="LinkedIn"></a>
             </div>
-            <div id="time-text"></div>
-          </div>
-        </div>
-      </section>
+            <p>Copyright ©2020 All rights reserved</p>
+        </footer>
     </div>
-  </div>
-
-  <script src="figma.js"></script>
 </body>
 </html>
